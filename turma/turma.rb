@@ -8,7 +8,10 @@ class Turma
 
     def  dados_turma
         puts "Matéria: #{professor.disciplina} , Professor(a): #{professor.nome}"
-    def listar alunos
+        listarAlunos
+    end
+
+    private def listarAlunos
         @alunos.each do |aluno|
             puts "Nome: #{aluno.nome}, Matrícula: #{aluno.matricula}"
     end
