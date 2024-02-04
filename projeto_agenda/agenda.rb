@@ -12,12 +12,23 @@ def allContacts
     end
 end
 
+def viewContact
+    print "Qual nome você deseja: "
+    nome = gets.chomp
+    @agenda.each do |contato|
+        if  contato[:nome].downcase.include?(nome.downcase)
+            puts "#{contato[:nome]} - #{contato[:telefone]}"
+        end
+    end
+
+end
+
 def addContact
     print "Nome: "
     nome = gets.chomp
     print "Telefone: "
     telefone = gets.chomp
-
+        
     @agenda << {nome: nome, telefone: telefone  }
 end
 
@@ -36,5 +47,7 @@ puts "1. Contatos\n2. Adicionar Contato\n3. Ver Contato\n4. Editar Contato\n5. R
         allContacts
     when codigo == 2
         addContact
+    when codigo == 3
+        viewContact
     end
 end
