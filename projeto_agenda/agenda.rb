@@ -59,6 +59,21 @@ def updateContact
     end
 end
 
+def deleteContact
+    print "Contato para remover: "
+    nome = gets.chomp
+
+    @agenda.each do |contato|
+        if contato[:nome].downcase == (nome.downcase)
+        #mostra qual a posição está o contato que foi digitado e está sendo percorrido atualmente
+          indice = @agenda.index(contato)
+          #deletar onde? indico a posição -> indice
+          @agenda.delete_at(indice)   
+          break
+        end
+    end
+end
+
 
 loop do
 
@@ -78,5 +93,7 @@ puts "1. Contatos\n2. Adicionar Contato\n3. Ver Contato\n4. Editar Contato\n5. R
         viewContact
     when codigo == 4
         updateContact
+    when codigo == 5
+        deleteContact
     end
 end
