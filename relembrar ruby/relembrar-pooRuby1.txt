@@ -8,3 +8,5 @@ e para acessar, naturalmente, é preciso criar um método modificador.
 comentando várias linhas em ruby 
 inicio : =begin
 fim do bloco de comentário: =end
+
+** o begin precisa estar no mesmo nível que a classe.

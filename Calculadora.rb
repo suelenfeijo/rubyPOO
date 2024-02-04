@@ -1,9 +1,11 @@
 class Calculadora 
 
+=begin
     def somar(x ,y)
 
             return x + y
     end
+=end
 end
 
 calc =  Calculadora.new
