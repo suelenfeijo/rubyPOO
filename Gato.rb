@@ -9,9 +9,9 @@ class Gato < Animal
         @raca = raca
     end
 
-    def comunicar
-        puts("Naaa tibeinatee, pararitibaba , tan nan nan , eu sou o gato da selva, tan nana nan")
-    end
+#    def comunicar
+#        puts("Naaa tibeinatee, pararitibaba , tan nan nan , eu sou o gato da selva, tan nana nan")
+#    end
 
 end
 
