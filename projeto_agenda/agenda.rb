@@ -32,6 +32,33 @@ def addContact
     @agenda << {nome: nome, telefone: telefone  }
 end
 
+def updateContact
+    #se o usuário apertar enter e não quiser alterar, mantém o nome que estava e não altera nada
+    print "Qual nome você quer editar: "
+    nome = gets.chomp
+
+    @agenda.each do |contato|
+        if contato[:nome].downcase == (nome.downcase)
+            print "Nome para editar (aperte enter para cancelar alterção):"
+            nome_atualizado = contato[:nome]
+
+            contato [:nome] = gets.chomp
+            #condição ternária , se vazia , aqui [:nome].empty? retorna  = true
+            #importante: .empty? , a primeira ? é do método isEmpty, a segunda é da análise ternária
+            contato [:nome] = contato[:nome].empty? ? nome_atualizado : contato[:nome]
+
+
+            print "Telefone para editar (aperte enter para cancelar alterção):"
+            telefone_atualizado = contato[:telefone]
+
+            contato [:telefone] = gets.chomp
+            contato [:telefone] = contato[:telefone].empty? ? telefone_atualizado : contato[:telefone]
+
+
+        end
+    end
+end
+
 
 loop do
 
@@ -49,5 +76,7 @@ puts "1. Contatos\n2. Adicionar Contato\n3. Ver Contato\n4. Editar Contato\n5. R
         addContact
     when codigo == 3
         viewContact
+    when codigo == 4
+        updateContact
     end
 end
