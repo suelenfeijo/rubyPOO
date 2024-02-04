@@ -14,6 +14,7 @@ class Turma
     private def listarAlunos
         @alunos.each do |aluno|
             puts "Nome: #{aluno.nome}, Matrícula: #{aluno.matricula}"
+        end
     end
 
 end
