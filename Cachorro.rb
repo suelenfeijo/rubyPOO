@@ -10,9 +10,9 @@ class Cachorro < Animal
         @raca = raca
     end
 
-#   def comunicar
-#    "Eu sou o cachorro super power mega hiper do ruby, au au au!..."
-#   end
+   def comunicar
+    "Eu sou o cachorro super power mega hiper do ruby, au au au!..."
+   end
 end
 
 
