@@ -1,4 +1,5 @@
-class Calculadora 
+require_relative 'AbstractOperacao'
+class Calculadora include Operacoes
 
 =begin
     def somar(x ,y)
@@ -22,5 +23,5 @@ end
 calc =  Calculadora.new
 
 calculo = calc.somar(5,5,6,20,60)
-
-puts calculo
+subtracao_resultado = calc.subtracao(20,30)
+puts calculo, subtracao_resultado
