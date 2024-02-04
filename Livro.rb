@@ -10,8 +10,17 @@ class Livro
     def mostrar_dados
         puts "Título: #{@nome}, Ano: #{@ano}, Preço: #{@preco}"
     end
+
+    def dar_desconto
+        if @ano < 2000
+           @preco = @preco * 0.9
+        else
+           @preco
+        end
+    end
 end
 
-livrao = Livro.new("Percy Jackson", 2010, 70.79)
+livrao = Livro.new("Percy Jackson", 1999, 70.79)
 
+livrao.dar_desconto
 livrao.mostrar_dados
