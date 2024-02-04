@@ -1,4 +1,4 @@
-require_relative 'Pessoa'
+require_relative 'pessoa'
 class Aluno < Pessoa
 
     attr_reader :matricula
