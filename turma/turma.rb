@@ -2,7 +2,7 @@ class Turma
     attr_reader :alunos, :professor
 
     def initialize(alunos, professor)
-        @alunos = Array.new
+        @alunos = alunos
         @professor = professor
     end
 
