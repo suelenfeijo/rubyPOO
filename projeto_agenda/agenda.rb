@@ -95,5 +95,7 @@ puts "1. Contatos\n2. Adicionar Contato\n3. Ver Contato\n4. Editar Contato\n5. R
         updateContact
     when codigo == 5
         deleteContact
+    else
+        puts "Digite uma opção válida"
     end
 end
